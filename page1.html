@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Upper Knee Angle</title>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			justify-content: center;
+			margin: 0 auto;
+			margin-top: 50px;
+			max-width: 700px;
+		}
+		.box {
+			box-sizing: border-box;
+			width: 45%;
+			height: 150px;
+			margin: 10px;
+			padding: 20px;
+			border: 1px solid #ddd;
+			overflow: auto;
+			background-color: white;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		.graph-container {
+			width: 100%;
+			margin-top: 50px;
+			max-width: 700px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+			<h2>Expected Upper Knee Angle</h2>
+			<p>5</p>
+		</div>
+
+		<div class="box">
+			<h2>Actual Upper Knee Angle</h2>
+			<p>10</p>
+		</div>
+	</div>
+
+	<div class="graph-container">
+		<canvas id="myChart"></canvas>
+	</div>
+
+	<script>
+		var ctx = document.getElementById('myChart').getContext('2d');
+		var chart = new Chart(ctx, {
+		    type: 'bar',
+		    data: {
+		        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+		        datasets: [{
+		            label: 'My Dataset',
+		            data: [5, 10, 7, 8, 3, 9, 12],
+		            backgroundColor: [
+		                'rgba(255, 99, 132, 0.2)',
+		                'rgba(54, 162, 235, 0.2)',
+		                'rgba(255, 206, 86, 0.2)',
+		                'rgba(75, 192, 192, 0.2)',
+		                'rgba(153, 102, 255, 0.2)',
+		                'rgba(255, 159, 64, 0.2)',
+		                'rgba(255, 99, 132, 0.2)'
+		            ],
+		            borderColor: [
+		                'rgba(255, 99, 132, 1)',
+		                'rgba(54, 162, 235, 1)',
+		                'rgba(255, 206, 86, 1)',
+		                'rgba(75, 192, 192, 1)',
+		                'rgba(153, 102, 255, 1)',
+		                'rgba(255, 159, 64, 1)',
+		                'rgba(255, 99, 132, 1)'
+		            ],
+		            borderWidth: 1
+		        }]
+		    },
+		    options: {
+		        scales: {
+		            yAxes: [{
+		                ticks: {
+		                    beginAtZero: true
+		                }
+		            }]
+		        }
+		    }
+		});
+	</script>
+</body>
+</html>

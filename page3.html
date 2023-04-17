@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Push-off Angle</title>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: #f2f2f2;
+		}
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto;
+			margin-top: 50px;
+			max-width: 800px;
+			padding: 20px;
+			background-color: white;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+		}
+		.box {
+			box-sizing: border-box;
+			width: 45%;
+			height: 200px;
+			margin: 20px;
+			padding: 20px;
+			border: 1px solid #ddd;
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			font-size: 24px;
+			color: #333;
+		}
+		.box h2 {
+			margin: 0;
+			font-size: 32px;
+			color: #666;
+		}
+		.graph-container {
+			margin-top: 50px;
+			max-width: 800px;
+			background-color: white;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+			padding: 20px;
+		}
+		.graph-container canvas {
+			width: 100%;
+			height: auto;
+		}
+		.img-container {
+			display: flex;
+			justify-content: center;
+			margin-top: 50px;
+			margin-bottom: 20px;
+		}
+		.img-container img {
+			max-width: 100%;
+			height: auto;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+			<h2>Expected Push-Off Angle</h2>
+			<p>21.05 degrees</p>
+		</div>
+
+		<div class="box">
+			<h2>Actual Push-Off Angle</h2>
+			<p>20.67 degrees</p>
+		</div>
+
+		<div class="box">
+			<h2>Suggestion Box</h2>
+			<p id="message">Welcome to  website!</p>
+		</div>
+	</div>
+	
+
+	<div class="img-container">
+		<img src="pushoff.jpg.png" alt="A beautiful image" width="30%">
+
+	</div>
+	<div class="img-container">
+		<img src="push_off_graph.png"  width="30%">
+	</div>
+	<div class="img-container">
+		<img src="Figure_1.png"  width="30%">
+	</div>
+	  
+	<script>
+		document.getElementById("message").textContent = "Here are some suggstions for you";
+	</script>
+	
+</body>
+</html>

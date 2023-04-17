@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Report Analysis</title>
+	<style>
+		body {
+			background-image: url('C:\Users\gopal\OneDrive\Desktop\Final\R.jpeg');
+			background-size: cover;
+			background-position: center center;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+			margin-bottom: 50px;
+			color: #4CAF50;
+		}
+		
+		.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-height: 34vh;
+    overflow: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: 70%;
+    max-width: 700px;
+	flex-direction: row;
+}
+.box {
+    box-sizing: border-box;
+	
+    width: 45%;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    overflow: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.box2 {
+    padding: 20px;
+    flex-basis: 50%;
+    font-size: 24px;
+    background-color: #e8eded;
+    color: rgb(39, 209, 20);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    display: inline-block;
+}
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+		th, td {
+			text-align: left;
+			padding: 8px;
+			border-bottom: 1px solid #ddd;
+		}
+		th {
+			background-color: #4CAF50;
+			color: white;
+		}
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+	</style>
+</head>
+<body>
+	<h1>Performance Report</h1>
+	<div class="box2">
+	<button><a href=" http://127.0.0.1:5500/templates/page1.html" target="_blank">Upper Knee Angle</a></button>
+	</div>
+	<div class="box2">
+		<button><a href="http://127.0.0.1:5500/templates/page2.html" target="_blank">Lower knee Angle</a></button>
+		</div>
+		<div class="box2">
+			<button><a href="http://127.0.0.1:5500/templates/page3.html" target="_blank"> Push-Off Angle</a></button>
+			</div>
+			<div class="box2">
+				<button><a href="http://127.0.0.1:5500/templates/page4.html" target="_blank">Trunk Angle</a></button>
+				</div>
+				<div class="box2">
+					<button><a href="http://127.0.0.1:5500/templates/page5.html" target="_blank">Speed</a></button>
+					</div>
+					<div class="box2">
+						<button><a href="http://127.0.0.1:5500/templates/page6.html" target="_blank">Reaction Time</a></button>
+						</div>
+	<!-- <div class="graph-container">
+		<canvas id="myChart"></canvas>
+	</div>
+	 -->
+	<div class="container">
+		<div class="box">
+			<h2>Push Off Angles</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Angle</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for angle in pushOffAngles %}
+						<tr>
+							<td>{{ angle }}</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+        <div class="box">
+			<h2>Trunk Angle</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Angle</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for angle in trunkAngles %}
+						<tr>
+							<td>{{ angle }}</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+		<!-- <div class="box">
+			<h2>Lower Knee Angles</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Angle</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for angle in lowerKneeAngles %}
+						<tr>
+							<td>{{ angle }}</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div> -->
+	</div>
+
+	<div class="container">
+		<div class="box">
+			<h2>Upper Knee Angle</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Angle</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for angle in upperKneeAngles %}
+						<tr>
+							<td>{{ angle }}</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+<!-- 
+		<div class="box">
+			<h2>Trunk Angle</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Angle</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for angle in trunkAngles %}
+						<tr>
+							<td>{{ angle }}</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div> -->
+		<div class="box">
+			<h2>Lower Knee Angles</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Angle</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for angle in lowerKneeAngles %}
+						<tr>
+							<td>{{ angle }}</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	
+	
+
+</body>
+</html>
+
+	

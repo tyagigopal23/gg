@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angles</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			width: 100%;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		th, td {
+			text-align: left;
+			padding: 8px;
+			border-bottom: 1px solid #ddd;
+		}
+		th {
+			background-color: #4CAF50;
+			color: white;
+		}
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+	</style>
+</head>
+<body>
+	<h1>Angles</h1>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Push off Angle</th>
+				<th>Lower Knee Angle</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for i in range(pushOffAngles|length) %}
+				<tr>
+					<td>{{ pushOffAngles[i] }}</td>
+					<td>{{ lowerKneeAngles[i] }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+</body>
+</html>
